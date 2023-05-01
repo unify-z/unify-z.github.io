@@ -3,11 +3,11 @@
   <title>TianYiの小破站</title>
   
   <subtitle>Hello World</subtitle>
-  <link href="http://un1fyz.fun/atom.xml" rel="self"/>
+  <link href="http://blog.un1fyz.fun/atom.xml" rel="self"/>
   
-  <link href="http://un1fyz.fun/"/>
+  <link href="http://blog.un1fyz.fun/"/>
   <updated>2023-04-22T09:08:53.344Z</updated>
-  <id>http://un1fyz.fun/</id>
+  <id>http://blog.un1fyz.fun/</id>
   
   <author>
     <name>UN1FYZ</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://un1fyz.fun/2023/04/16/hello-world/"/>
-    <id>http://un1fyz.fun/2023/04/16/hello-world/</id>
+    <link href="http://blog.un1fyz.fun/2023/04/16/hello-world/"/>
+    <id>http://blog.un1fyz.fun/2023/04/16/hello-world/</id>
     <published>2023-04-16T09:13:00.862Z</published>
     <updated>2023-04-22T09:08:53.344Z</updated>
     
