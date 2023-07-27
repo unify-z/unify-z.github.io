@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Yekuzの小破站</title>
+  <title>Akaosの小破站</title>
   
   <subtitle>Hello World</subtitle>
-  <link href="http://blog.un1fyz.fun/atom.xml" rel="self"/>
+  <link href="http://blog.yekuz1.site/atom.xml" rel="self"/>
   
-  <link href="http://blog.un1fyz.fun/"/>
+  <link href="http://blog.yekuz1.site/"/>
   <updated>2023-06-25T04:37:47.387Z</updated>
-  <id>http://blog.un1fyz.fun/</id>
+  <id>http://blog.yekuz1.site/</id>
   
   <author>
     <name>unifyz</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://blog.un1fyz.fun/2023/07/22/hello-world/"/>
-    <id>http://blog.un1fyz.fun/2023/07/22/hello-world/</id>
+    <link href="http://blog.yekuz1.site/2023/07/22/hello-world/"/>
+    <id>http://blog.yekuz1.site/2023/07/22/hello-world/</id>
     <published>2023-07-21T23:32:16.568Z</published>
     <updated>2023-06-25T04:37:47.387Z</updated>
     
