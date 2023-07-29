@@ -1,6 +1,6 @@
 /*个人信息美化*/
 #aside-content>.card-widget.card-info {
-    background: #fff url(https://img01.s3.bitiful.net/2023/07/2f746552ece426f97daf8d9bbda0ea77.png) top 33% center no-repeat;
+    background: #fff  top 33% center no-repeat;
     position: relative;
   }
   #aside-content .card-info #card-info-btn {
@@ -546,9 +546,14 @@ div.recent-post-item{
     color:var(--lyx-white)
 }
   /* 页脚透明 */
-  #footer{
-    background: transparent!important;
-  }
+[data-theme="dark"] #footer{
+    background-color: var(--lyx-black-acrylic2);
+    backdrop-filter: blur(10px);
+}
+[data-theme="light"] #footer{
+  background-color: var(--lyx-white-acrylic2);
+  backdrop-filter: blur(10px);
+}
   /* 头图透明 */
   #page-header{
     background: transparent!important;
