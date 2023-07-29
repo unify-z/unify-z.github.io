@@ -1,22 +1,3 @@
-/*个人信息美化*/
-#aside-content>.card-widget.card-info {
-    background: #3333  top 33% center no-repeat;
-    position: relative;
-  }
-  #aside-content .card-info #card-info-btn {
-    display: none;
-  }
-  #aside-content .card-info .author-info__name {
-    font-weight: 700;
-    color: black;
-  }
-  #aside-content .card-info .author-info__description {
-    font-weight: 600;
-    color: black;
-  }
-  .site-data > a .headline {
-    color: rgb(0 0 0 / 100%);
-  }
 
 
 /* 文章目录 */
@@ -445,8 +426,10 @@ hr {
   /*外联字体引入*/
   @font-face {
     font-family: "iconfont"; /* Project id 3498204 */
-    src: url('https://img01.s3.bitiful.net/ttf/1.ttf') format('truetype'),
-         ;
+    src: url('https://img01.s3.bitiful.net/ttf/iconfont.woff2') format('woff2'),
+         url('https://img01.s3.bitiful.net/ttf/iconfont.woff') format('woff'),
+         url('https://img01.s3.bitiful.net/ttf/iconfont.ttf') format('truetype'),
+         url('https://img01.s3.bitiful.net/ttf/1.ttf') format('truetype');
   }
   
   .iconfont {
@@ -1154,9 +1137,19 @@ div.recent-post-item{
   }
 
 /* 首页分类条展示 */
-#category-bar{
+[data-theme="light"] #category-bar{
   padding: 0.4rem 1rem 0.4rem 0.5rem;
-  background: var(--heo-card-bg);
+  background: var(--lyx-white-acrylic2);
+  border-radius: 12px;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0.5rem;
+  border: var(--style-border);
+}
+[data-theme="dark"] #category-bar{
+  padding: 0.4rem 1rem 0.4rem 0.5rem;
+  background: var(--lyx-black-acrylic1);
   border-radius: 12px;
   display: flex;
   white-space: nowrap;
