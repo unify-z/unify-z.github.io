@@ -1,6 +1,6 @@
 /*个人信息美化*/
 #aside-content>.card-widget.card-info {
-    background: #fff  top 33% center no-repeat;
+    background: #3333  top 33% center no-repeat;
     position: relative;
   }
   #aside-content .card-info #card-info-btn {
@@ -442,35 +442,74 @@ hr {
       line-height: 1.2;
     }
   }
+  /*外联字体引入*/
+  @font-face {
+    font-family: "iconfont"; /* Project id 3498204 */
+    src: url('https://img01.s3.bitiful.net/ttf/1.ttf') format('truetype'),
+         ;
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-danmu:before {
+    content: "\e612";
+  }
+  
+  .icon-biaoqian:before {
+    content: "\e63d";
+  }
+  
+  .icon-fenlei:before {
+    content: "\e601";
+  }
+  
+  .icon-fanti:before {
+    content: "\e6d8";
+  }
+  
+  .icon-baidu:before {
+    content: "\e60a";
+  }
+  
+  .icon-csdn:before {
+    content: "\e600";
+  }
+  
+  .icon-RSS:before {
+    content: "\e78a";
+  }
+  
+  .icon-bilibili:before {
+    content: "\e609";
+  }
+  
+  .icon-gitee:before {
+    content: "\e60c";
+  }
+  
+  .icon-zhihu:before {
+    content: "\e60d";
+  }
+  
   
 
-/*外链字体引入*/
-@font-face {
-	font-family: Efont;
-  font-display: swap;
-	src: url('https://cdn.cnbj1.fds.api.mi-img.com/mi-font-service/misans/500/lt.53f5494eba0de730.0.woff2') format('woff2')
-      }
-/* 相关推荐 */
-.relatedPosts>.relatedPosts-list>div {
-    border-radius: 12px;
-  } 
-  .relatedPosts>.headline {
-  margin-bottom: 0.8rem !important;
-  font-size: 1.2em;
-  }
-  #nav{
-	background-color: #879caa99;
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
+  
 /*页面半模糊*/
-}
 [data-theme="light"]
 div.recent-post-item{
     background: rgba(255,255,255,0.5)!important;
+    backdrop-filter: blur(30px) saturate(180%);
   }
 [data-theme="dark"]
 div.recent-post-item{
     background: rgba(0,0,0,0.5)!important;
+    backdrop-filter: blur(30px) saturate(180%);
   }
 [data-theme='light'] #post{
     background-color: var(--lyx-white-acrylic1);
