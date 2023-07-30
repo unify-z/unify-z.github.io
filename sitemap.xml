@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.yekuz1.site/link/index.html</loc>
+    
+    <lastmod>2023-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yekuz1.site/link/index-1.html</loc>
+    
+    <lastmod>2023-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.yekuz1.site/2023/07/30/%E7%BC%A4%E7%BA%B7%E4%BA%91-PicGo%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/</loc>
     
     <lastmod>2023-07-30</lastmod>
@@ -14,15 +32,6 @@
     <loc>http://blog.yekuz1.site/2023/07/22/hello-world/</loc>
     
     <lastmod>2023-06-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.yekuz1.site/link/index.html</loc>
-    
-    <lastmod>2023-05-08</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
