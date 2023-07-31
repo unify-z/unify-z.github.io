@@ -1,1 +1,1 @@
-var posts=["2023/07/22/hello-world/","2023/07/30/缤纷云-PicGo搭建图床/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["2023/07/30/缤纷云-PicGo搭建图床/","2023/07/22/hello-world/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
