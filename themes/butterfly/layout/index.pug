@@ -1,0 +1,12 @@
+extends includes/layout.pug
+
+
+block content
+  //include includes/bbTimeList.pug
+  include ./includes/mixins/post-ui.pug
+  
+  #recent-posts.recent-posts
+    //include includes/bbTimeList.pug
+    include includes/categoryBar.pug
+    +postUI
+    include includes/pagination.pug

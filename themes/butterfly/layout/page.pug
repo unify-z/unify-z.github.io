@@ -1,0 +1,29 @@
+extends includes/layout.pug
+
+block content
+  #page
+    if top_img === false
+      h1.page-title= page.title
+
+    case page.type
+      when 'tags'
+        link(rel='stylesheet' href='/css/demo2.css' type='text/css')
+        include includes/page/tags.pug
+      when 'link'
+        link(rel='stylesheet' href='/css/demo2.css' type='text/css')
+        include includes/page/flink.pug
+      when 'categories'
+        link(rel='stylesheet' href='/css/demo2.css' type='text/css')
+        include includes/page/categories.pug
+      when 'about'
+        link(rel='stylesheet' href='/css/demo2.css' type='text/css')
+        include includes/page/about.pug
+      when 'essay'
+        link(rel='stylesheet' href='/css/demo2.css' type='text/css')
+        include includes/page/essay.pug
+      default
+        include includes/page/default-page.pug
+
+    if page.comments !== false && theme.comments && theme.comments.use
+      - var commentsJsLoad = true
+      !=partial('includes/third-party/comments/index', {}, {cache: true})

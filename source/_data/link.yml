@@ -1,0 +1,73 @@
+
+- class_name: 开发基础
+  class_desc: 本博客的开发参考了这些网站的源码或教程，在此衷心的感谢他们！
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/zh-tw/
+      avatar: https://img01.s3.bitiful.net/a/avatar-0.jpg
+      descr: 快速、简单且强大的网志框架
+      siteshot: https://s0.wp.com/mshots/v1/https://hexo.io/?w=600&h=400
+    - name: Butterfly主题
+      link: https://butterfly.js.org
+      avatar: https://fbcd.co/images/products/bc15e0b0a488c2289dd725c41ee89990_resize.jpg
+      descr: A Simple and Card UI Design theme for Hexo
+      siteshot: https://s0.wp.com/mshots/v1/https://butterfly.js.org/?w=600&h=400
+    
+- class_name: 推荐博客
+  flink_style: flexcard
+  link_list:
+    - name: 安知鱼`Blog
+      link: https://blog.anheyu.com/
+      avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
+      descr: 生活明朗，万物可爱
+      siteshot: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/blog.anheyu.com.jpg
+    - name: 听风の小窝
+      link: https://blog.akaos233.top/
+      avatar: https://img01.s3.bitiful.net/2023/07/07d3bd094d9fc85bc19220208b516552.jpg
+      descr: 近水楼台先得月，向阳花木易为春
+      siteshot: https://s0.wp.com/mshots/v1/https://blog.akaos233.top/?w=600&h=400
+
+- class_name: 友情链接
+  class_desc: 那些人，那些事 
+  link_list:
+    - name: 理随
+      link: https://lisui.top/
+      avatar: https://img01.s3.bitiful.net/a/avater-1.jpg
+      descr: 生而无畏，战至终章
+      #siteshot: https://s0.wp.com/mshots/v1/https://lisui.top/?w=600&h=400
+    - name: 檐牙的小窝
+      link: https://www.zxma.top/
+      avatar: https://img01.s3.bitiful.net/a/avatar-2.jpg
+      descr: 欢迎光临檐牙的小窝
+      siteshot: https://s0.wp.com/mshots/v1/https://zxma.top/?w=600&h=400
+    - name: Qing
+      link: https://blog.wuyuxi.cn/
+      avatar: https://img01.s3.bitiful.net/a/655887614c2ce.webp
+      descr: 保持善良与温柔，追求上进与美好。
+      siteshot: https://s0.wp.com/mshots/v1/https://blog.wuyuxi.cn/?w=600&h=400
+    - name: 偷闲小站
+      link: https://blog.andypang.cc/
+      avatar: https://image.andypang.cc/images/202309141917982.jpg
+      descr: 跨越山海，终见曙光
+      siteshot: https://image.andypang.cc/images/202310101744343.png
+    - name: 阿定の小站
+      link: https://saop.cc
+      avatar: https://picbed.saop.cc/Asuna/Asuna1x1.png
+      descr: 我们终会相遇相知，在那悠远的苍穹
+      siteshot: https://picbed.saop.cc/Asuna/Asuna-EvolutionaryProcess_2.png
+    - name: HiPeach
+      link: https://blog.opeach.cn
+      avatar: https://npm.elemecdn.com/opicture@1.0.0/main/avatar.webp
+      descr: 妙不可言
+      siteshot: https://s0.wp.com/mshots/v1/https://blog.opeach.cn/?w=600&h=400
+    - name: 呓语梦轩 
+      link: https://blog.awaae001.top 
+      avatar: https://blog.awaae001.top/ico.jpg 
+      descr: 用心享受生活
+
+
+
+
+  
+
+  

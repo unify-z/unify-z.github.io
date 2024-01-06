@@ -1,0 +1,75 @@
+- var htmlClassHideAside = theme.aside.enable && theme.aside.hide ? 'hide-aside' : ''
+- page.aside = is_archive() ? theme.aside.display.archive: is_category() ? theme.aside.display.category : is_tag() ? theme.aside.display.tag : page.aside
+- var hideAside = !theme.aside.enable || page.aside === false ? 'hide-aside' : ''
+- var pageType = is_post() ? 'post' : 'page'
+
+doctype html
+html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside)
+  head
+    include ./head.pug
+  body
+    if theme.preloader.enable
+      !=partial('includes/loading/index', {}, {cache: true})
+
+    if theme.background
+      #web_bg
+    
+    #setting-panel-box
+      #setting-panel
+        .panel-content-1
+          .panel-btns(onclick="document.querySelector('#search-button .site-page').click()")
+            span 🔍
+            span 搜索
+          .panel-btns(onclick="document.getElementById('darkmode').click()")
+            span 🌙
+            span 模式切换
+          .panel-btns(onclick='document.getElementById("hide-aside-btn").click()')
+            span 🔛
+            span 单双栏切换
+          .panel-btns(onclick='document.getElementById("hide-aside-btn").click()')
+        .panel-content-2
+          .panel-music-btns
+            button(onclick="changeMusicList(0)") 歌单1
+          .panel-music-content
+            .music-box
+              .music-inner-box
+                .music-banner
+                  img(src="https://p3.music.126.net/qX7knUIlpmbJ34UBzCCS6w==/109951164802366812.jpg?param=300y300", alt="")
+                  span Music
+                .aplayer.no-destroy(data-id="8897333223" data-server="netease" data-type="playlist" data-autoplay="false")
+ 
+      //- .panel-content-3 正在施工
+
+    !=partial('includes/sidebar', {}, {cache: true})
+
+    if page.type !== '404'
+      #body-wrap(class=pageType)
+        include ./header/index.pug
+        include ./bbTimeList.pug
+        include ./hometop.pug
+
+        main#content-inner.layout(class=hideAside)
+          if body
+            div!= body
+          else
+            block content
+            if theme.aside.enable && page.aside !== false
+              include widget/index.pug
+
+        - var footerBg = theme.footer_bg
+        if (footerBg)
+          if (footerBg === true)
+            - var footer_bg = bg_img
+          else
+            - var footer_bg = isImgOrUrl(theme.footer_bg) ? `background-image: url('${url_for(footerBg)}')` : `background: ${footerBg}`
+        else
+          - var footer_bg = ''
+
+        footer#footer(style=footer_bg)
+          !=partial('includes/footer', {}, {cache: true})
+
+    else
+      include ./404.pug
+
+    include ./rightside.pug
+    include ./additional-js.pug

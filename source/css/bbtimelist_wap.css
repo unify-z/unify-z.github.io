@@ -1,0 +1,12 @@
+#bbTimeList{
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    background: var(--card-bg);
+    color: var(--font-color);
+    margin-top: 1rem;
+    padding: 0.6rem 1rem 0.5rem 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+  }
