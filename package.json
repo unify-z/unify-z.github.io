@@ -42,7 +42,7 @@
     "hexo-theme-landscape": "^0.0.3"
   },
   "devDependencies": {
-    "@edgio/hexo": "^7.2.1",
+    "@edgio/hexo": "^7.5.0",
     "@layer0/cli": "^4.19.9",
     "@layer0/core": "^4.19.9",
     "@layer0/devtools": "^4.19.9",
