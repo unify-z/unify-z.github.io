@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>缤纷云&#43;PicGo搭建图床 - 听风博客</title><meta name="author" content="unify-z">
+<meta name="description" content=""><meta name="keywords" content='图床, PicGo'>
+  <meta itemprop="name" content="缤纷云&#43;PicGo搭建图床">
+  <meta itemprop="datePublished" content="2023-07-30T10:22:28+00:00">
+  <meta itemprop="dateModified" content="2023-07-30T10:22:28+00:00">
+  <meta itemprop="wordCount" content="95">
+  <meta itemprop="keywords" content="图床,PicGo"><meta property="og:url" content="https://blog.ifeng.asia/posts/220ffe6/">
+  <meta property="og:site_name" content="听风博客">
+  <meta property="og:title" content="缤纷云&#43;PicGo搭建图床">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-07-30T10:22:28+00:00">
+    <meta property="article:modified_time" content="2023-07-30T10:22:28+00:00">
+    <meta property="article:tag" content="图床">
+    <meta property="article:tag" content="PicGo">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="缤纷云&#43;PicGo搭建图床">
+      <meta name="twitter:site" content="@z56762">
+<meta name="twitter:creator" content="@@z56762" /><meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://blog.ifeng.asia/posts/220ffe6/" title="缤纷云&#43;PicGo搭建图床 - 听风博客" /><link rel="next" type="text/html" href="https://blog.ifeng.asia/posts/05fcb59/" title="DN42 实验网络 —— 内网搭建" /><link rel="alternate" type="text/markdown" href="https://blog.ifeng.asia/posts/220ffe6/index.md" title="缤纷云+PicGo搭建图床 - 听风博客"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "缤纷云+PicGo搭建图床",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/blog.ifeng.asia\/posts\/220ffe6\/"
+    },"genre": "posts","keywords": "图床, PicGo","wordcount":  95 ,
+    "url": "https:\/\/blog.ifeng.asia\/posts\/220ffe6\/","datePublished": "2023-07-30T10:22:28+00:00","dateModified": "2023-07-30T10:22:28+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "unify-z"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="听风博客"><span class="header-title-text">听风博客</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item">
+              <a class="menu-link" href="/dn42/"><i class="fa-solid fa-server fa-fw fa-sm" aria-hidden="true"></i> DN42</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="听风博客"><span class="header-title-text">听风博客</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item"><a class="menu-link" href="/dn42/"><i class="fa-solid fa-server fa-fw fa-sm" aria-hidden="true"></i> DN42</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>缤纷云&#43;PicGo搭建图床</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a href="https://blog.ifeng.asia/" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img loading="lazy" src="https://q.qlogo.cn/g?b=qq&amp;nk=3336016933&amp;s=160" alt="unify-z" data-title="unify-z" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;unify-z</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E5%82%A8%E5%AD%98/" class="post-category" title="分类 - 储存"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 储存</a></span></div><div class="post-meta-line"><span title="发布于 2023-07-30 10:22:28"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2023-07-30">2023-07-30</time></span>&nbsp;<span title="95 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 100 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 1 分钟</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#为什么要选择picgo缤纷云">为什么要选择PicGo+缤纷云</a></li>
+    <li><a href="#缤纷云免费额度">缤纷云免费额度</a></li>
+    <li><a href="#相关工具">相关工具</a></li>
+    <li><a href="#正文">正文</a>
+      <ul>
+        <li><a href="#具体步骤">具体步骤</a>
+          <ul>
+            <li><a href="#第一步准备步骤">第一步：准备步骤</a></li>
+            <li><a href="#第二步创建储存桶">第二步：创建储存桶</a></li>
+            <li><a href="#测试上传">测试上传</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="为什么要选择picgo缤纷云" class="heading-element"><span>为什么要选择PicGo+缤纷云</span>
+  <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e9%80%89%e6%8b%a9picgo%e7%bc%a4%e7%ba%b7%e4%ba%91" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>​		最近陆陆续续的把博客搭建完了，后来发现在插入图片时不可避免的会碰到关于图床选择的问题，在参考了网上十几篇关于图床的文章后，我总结出了以下内容，同时网上也没有关于缤纷云建图床的方案，本篇文章既作为笔记，也作为文章发布，供大家参考~</p>
+<h2 id="缤纷云免费额度" class="heading-element"><span>缤纷云免费额度</span>
+  <a href="#%e7%bc%a4%e7%ba%b7%e4%ba%91%e5%85%8d%e8%b4%b9%e9%a2%9d%e5%ba%a6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>​		如下，50GiB和10GB的流量已经够我们用了（如果用cdn的话还能有20gb），详细见下</p>
+<p>免费额度<a href="https://www.dogecast.com/docs/prices/basic#%e5%85%8d%e8%b4%b9%e9%a2%9d%e5%ba%a6"target="_blank" rel="external nofollow noopener noreferrer"></a></p>
+<p>前置条件 - <a href="https://console.bitiful.net/users"target="_blank" rel="external nofollow noopener noreferrer"><strong>实名账户</strong></a>:</p>
+<ul>
+<li>前 50 GiB 存储</li>
+<li>每月前 10*3 GB HTTP/HTTPS 流量（每日每项限 5 GB）
+<ul>
+<li>S4 出口流量 10GB/月</li>
+<li>内置 CDN 回源 S4 流量 10GB/月</li>
+<li>内置 CDN 出口流量 10GB/月</li>
+</ul>
+</li>
+<li>每月前 10*3 万次 请求（每日每项限 1 万次）
+<ul>
+<li>S4 请求数 10万次/月</li>
+<li>内置 CDN 回源 S4 请求数 10万次/月</li>
+<li>内置 CDN 请求数 10万次/月</li>
+</ul>
+</li>
+</ul>
+<h2 id="相关工具" class="heading-element"><span>相关工具</span>
+  <a href="#%e7%9b%b8%e5%85%b3%e5%b7%a5%e5%85%b7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>PicGo:https://github.com/Molunerfinn/PicGo</p>
+<p>Node.js:https://nodejs.org</p>
+<p>缤纷云:https://www.dogecast.com/</p>
+<h2 id="正文" class="heading-element"><span>正文</span>
+  <a href="#%e6%ad%a3%e6%96%87" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="具体步骤" class="heading-element"><span>具体步骤</span>
+  <a href="#%e5%85%b7%e4%bd%93%e6%ad%a5%e9%aa%a4" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h4 id="第一步准备步骤" class="heading-element"><span>第一步：准备步骤</span>
+  <a href="#%e7%ac%ac%e4%b8%80%e6%ad%a5%e5%87%86%e5%a4%87%e6%ad%a5%e9%aa%a4" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>​			1.首先将PicGo、Nodejs等工具安装好，并注册缤纷云账号，国内平台注册不在叙述（如果出现超时等网络错误，请自行解决）</p>
+<p>​			2.之后在picgo中搜索插件&quot;s3&quot;，下载第一个即可。后面那个也会介绍具体配置内容，可能略有不同。</p>
+<p><img loading="lazy" src="https://cdn.unifyz.5k.work/2023/07/6729ee5bc42bc1b2e0b362cdd5938ab5.png" alt="6729ee5bc42bc1b2e0b362cdd5938ab5" srcset="https://cdn.unifyz.5k.work/2023/07/6729ee5bc42bc1b2e0b362cdd5938ab5.png?size=small, https://cdn.unifyz.5k.work/2023/07/6729ee5bc42bc1b2e0b362cdd5938ab5.png?size=medium 1.5x, https://cdn.unifyz.5k.work/2023/07/6729ee5bc42bc1b2e0b362cdd5938ab5.png?size=large 2x" data-title="6729ee5bc42bc1b2e0b362cdd5938ab5" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h4 id="第二步创建储存桶" class="heading-element"><span>第二步：创建储存桶</span>
+  <a href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e5%88%9b%e5%bb%ba%e5%82%a8%e5%ad%98%e6%a1%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>​			进入控制台后，点击“创建”，然后如图设置，注意这边权限一定要选公开桶，否则他人访问不了你的图片！</p>
+<p><img loading="lazy" src="https://cdn.unifyz.5k.work/2023/07/ed5e0ad6ed54bbf68e7a63451f1ccfed.png" alt="{61ACE84F-04F0-44c3-B5D2-1E5888727C42}" srcset="https://cdn.unifyz.5k.work/2023/07/ed5e0ad6ed54bbf68e7a63451f1ccfed.png?size=small, https://cdn.unifyz.5k.work/2023/07/ed5e0ad6ed54bbf68e7a63451f1ccfed.png?size=medium 1.5x, https://cdn.unifyz.5k.work/2023/07/ed5e0ad6ed54bbf68e7a63451f1ccfed.png?size=large 2x" data-title="{61ACE84F-04F0-44c3-B5D2-1E5888727C42}" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>​		创建完后，回到控制台，进入&quot;AccessKey&quot;页面，然后点击右上角&quot;创建子用户&quot;，名称随意。不出意外的话你将会看到Access Key和Secret Key。先找个东西记录下来，等下要用。<img loading="lazy" src="https://cdn.unifyz.5k.work/2023/07/2479d493c3702ca1ef00f56ddc18cc39.png" alt="{6EA4A23A-CFA3-4495-8158-238469BE6A56}" srcset="https://cdn.unifyz.5k.work/2023/07/2479d493c3702ca1ef00f56ddc18cc39.png?size=small, https://cdn.unifyz.5k.work/2023/07/2479d493c3702ca1ef00f56ddc18cc39.png?size=medium 1.5x, https://cdn.unifyz.5k.work/2023/07/2479d493c3702ca1ef00f56ddc18cc39.png?size=large 2x" data-title="{6EA4A23A-CFA3-4495-8158-238469BE6A56}" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p><img loading="lazy" src="https://cdn.unifyz.5k.work/2023/07/263047613a2a07ca1117bd693ae8c863.png" alt="{F12C5CEE-FC33-439b-8F94-C3F0C5C53516}" srcset="https://cdn.unifyz.5k.work/2023/07/263047613a2a07ca1117bd693ae8c863.png?size=small, https://cdn.unifyz.5k.work/2023/07/263047613a2a07ca1117bd693ae8c863.png?size=medium 1.5x, https://cdn.unifyz.5k.work/2023/07/263047613a2a07ca1117bd693ae8c863.png?size=large 2x" data-title="{F12C5CEE-FC33-439b-8F94-C3F0C5C53516}" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>​			然后设定权限，务必四个全勾（都有用）	 <img loading="lazy" src="https://cdn.unifyz.5k.work/2023/07/f56463c08d9aa61793eb004af016eb18.png" alt="{BFB71FBD-5785-4762-9E39-E4BE9549C252}" srcset="https://cdn.unifyz.5k.work/2023/07/f56463c08d9aa61793eb004af016eb18.png?size=small, https://cdn.unifyz.5k.work/2023/07/f56463c08d9aa61793eb004af016eb18.png?size=medium 1.5x, https://cdn.unifyz.5k.work/2023/07/f56463c08d9aa61793eb004af016eb18.png?size=large 2x" data-title="{BFB71FBD-5785-4762-9E39-E4BE9549C252}" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>​			随后回到PicGo，在图床设置里点击&quot;Amazon S3&quot;，照下图设置</p>
+<p>部分参数：</p>
+<p>​			文件路径（推荐，你也可以填其他的）：/{year}/{month}/{md5}.{extName}</p>
+<p>​			地区：cn-east-1</p>
+<p>​			自定义节点：https://s3.bitiful.net</p>
+<p>​			自定义域名：https://{buckets-name}.s3.bitiful.net/</p>
+<p>​	·				   <img loading="lazy" src="https://cdn.unifyz.5k.work/2023/07/eaa6eaca38052cb33317fc2301f384c3.png" alt="{EB9F3C99-1261-4be5-A25D-0F14F0BD9C12}" srcset="https://cdn.unifyz.5k.work/2023/07/eaa6eaca38052cb33317fc2301f384c3.png?size=small, https://cdn.unifyz.5k.work/2023/07/eaa6eaca38052cb33317fc2301f384c3.png?size=medium 1.5x, https://cdn.unifyz.5k.work/2023/07/eaa6eaca38052cb33317fc2301f384c3.png?size=large 2x" data-title="{EB9F3C99-1261-4be5-A25D-0F14F0BD9C12}" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h4 id="测试上传" class="heading-element"><span>测试上传</span>
+  <a href="#%e6%b5%8b%e8%af%95%e4%b8%8a%e4%bc%a0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>​			不出意外的话现在就已经设置完了，这时候返回主页测试图片能不能上传成功</p>
+<p>​			<img loading="lazy" src="https://cdn.unifyz.5k.work/2023/07/b7719ad4d6e14706203a1c49138e867c.png" alt="b7719ad4d6e14706203a1c49138e867c" srcset="https://cdn.unifyz.5k.work/2023/07/b7719ad4d6e14706203a1c49138e867c.png?size=small, https://cdn.unifyz.5k.work/2023/07/b7719ad4d6e14706203a1c49138e867c.png?size=medium 1.5x, https://cdn.unifyz.5k.work/2023/07/b7719ad4d6e14706203a1c49138e867c.png?size=large 2x" data-title="b7719ad4d6e14706203a1c49138e867c" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>​			验证在缤纷云里是否上传成功</p>
+<p>​	<img loading="lazy" src="http://cdn.unifyz.5k.work/2023/07/2ad1b60e3ac94d36e45c6bda66c8c9e6.png" alt="2ad1b60e3ac94d36e45c6bda66c8c9e6" srcset="http://cdn.unifyz.5k.work/2023/07/2ad1b60e3ac94d36e45c6bda66c8c9e6.png?size=small, http://cdn.unifyz.5k.work/2023/07/2ad1b60e3ac94d36e45c6bda66c8c9e6.png?size=medium 1.5x, http://cdn.unifyz.5k.work/2023/07/2ad1b60e3ac94d36e45c6bda66c8c9e6.png?size=large 2x" data-title="2ad1b60e3ac94d36e45c6bda66c8c9e6" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>​</p></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2023-07-30 10:22:28">更新于 2023-07-30&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/220ffe6/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="https://blog.ifeng.asia/posts/220ffe6/" data-title="缤纷云&#43;PicGo搭建图床" data-via="@z56762" data-hashtags="图床,PicGo"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://blog.ifeng.asia/posts/220ffe6/" data-hashtag="图床"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://blog.ifeng.asia/posts/220ffe6/" data-title="缤纷云&#43;PicGo搭建图床"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/%E5%9B%BE%E5%BA%8A/" class="post-tag" title="标签 - 图床">图床</a><a href="/tags/picgo/" class="post-tag" title="标签 - PicGo">PicGo</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/05fcb59/" class="post-nav-item" rel="next" title="DN42 实验网络 —— 内网搭建">DN42 实验网络 —— 内网搭建<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<link href="https://registry.npmmirror.com/artalk/2.9.1/files/dist/Artalk.css" rel="stylesheet" />
+<script src="https://registry.npmmirror.com/artalk/2.9.1/files/dist/Artalk.js"></script>
+
+
+<div id="Comments"></div>
+
+<script>
+  let enabledarkMode = false;
+  const htmlTag = document.querySelector('html');
+  if (htmlTag.getAttribute('data-theme') === 'dark') {
+    enabledarkMode = true;
+  }
+  const ArtalkConfig = {
+    el: '#Comments',
+    pageKey: window.location.pathname,
+    server: 'https://artalk.unifyz.top/',
+    site: '听风博客',
+    darkMode: enabledarkMode,
+  };
+
+
+  const mutationObserver = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (mutation.attributeName === 'data-theme') {
+        ArtalkConfig.darkMode = htmlTag.getAttribute('data-theme') === 'dark';
+        Artalk.init(ArtalkConfig);
+        break;
+      }
+    }
+  });
+
+  mutationObserver.observe(htmlTag, { attributes: true });
+  Artalk.init(ArtalkConfig);
+</script></article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.144.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.17-8b402129"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="https://blog.ifeng.asia/"target="_blank" rel="external nofollow noopener noreferrer">unify-z</a></span><span id="runtime" class="runtime">
+              这个小破站已运行 0 年 0 天 0 时 0 分 0 秒
+          </span></div></div>
+  </footer><script>
+  const start_time = 1673712000 * 1000; 
+
+  function formatRuntime(seconds) {
+    const years = Math.floor(seconds / (365 * 24 * 60 * 60));
+    seconds %= 365 * 24 * 60 * 60;
+    const days = Math.floor(seconds / (24 * 60 * 60));
+    seconds %= 24 * 60 * 60;
+    const hours = Math.floor(seconds / (60 * 60));
+    seconds %= 60 * 60;
+    const minutes = Math.floor(seconds / 60);
+    seconds %= 60;
+
+    return `${years} 年 ${days} 天 ${hours} 时 ${minutes} 分 ${seconds} 秒`;
+  }
+
+  setInterval(() => {
+    const now_time = new Date().getTime();
+    let run_time = Math.floor((now_time - start_time) / 1000);
+    document.getElementById('runtime').textContent = ` 这个小破站已运行 ${formatRuntime(run_time)}`;
+  }, 1000); 
+</script></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.17-8b402129"};</script><script src="/js/theme.min.js" defer></script><script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b683b6034101ff7bba87bf90667888c9";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script></body>
+</html>

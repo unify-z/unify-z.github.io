@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图床 - 标签 - 听风博客</title>
+    <link>https://blog.ifeng.asia/tags/%E5%9B%BE%E5%BA%8A/</link>
+    <description>听风博客</description>
+    <generator>Hugo 0.144.2 &amp; FixIt v0.3.17-8b402129</generator>
+    <language>zh-CN</language>
+    <managingEditor>3336016933@qq.com (unify-z)</managingEditor>
+    <webMaster>3336016933@qq.com (unify-z)</webMaster>
+    <lastBuildDate>Sun, 30 Jul 2023 10:22:28 +0000</lastBuildDate>
+    <atom:link href="https://blog.ifeng.asia/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>缤纷云&#43;PicGo搭建图床</title>
+      <link>https://blog.ifeng.asia/posts/220ffe6/</link>
+      <pubDate>Sun, 30 Jul 2023 10:22:28 +0000</pubDate><author>3336016933@qq.com (unify-z)</author>
+      <guid>https://blog.ifeng.asia/posts/220ffe6/</guid>
+      <category domain="https://blog.ifeng.asia/categories/%E5%82%A8%E5%AD%98/">储存</category>
+      <description>缤纷云+PicGo搭建图床</description>
+    </item>
+  </channel>
+</rss>

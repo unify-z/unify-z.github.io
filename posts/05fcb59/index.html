@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>DN42 实验网络 —— 内网搭建 - 听风博客</title><meta name="author" content="unify-z">
+<meta name="description" content=""><meta name="keywords" content='DN42'>
+  <meta itemprop="name" content="DN42 实验网络 —— 内网搭建">
+  <meta itemprop="datePublished" content="2025-01-21T14:56:57+08:00">
+  <meta itemprop="dateModified" content="2025-01-21T14:56:57+08:00">
+  <meta itemprop="wordCount" content="304">
+  <meta itemprop="keywords" content="DN42"><meta property="og:url" content="https://blog.ifeng.asia/posts/05fcb59/">
+  <meta property="og:site_name" content="听风博客">
+  <meta property="og:title" content="DN42 实验网络 —— 内网搭建">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-01-21T14:56:57+08:00">
+    <meta property="article:modified_time" content="2025-01-21T14:56:57+08:00">
+    <meta property="article:tag" content="DN42">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DN42 实验网络 —— 内网搭建">
+      <meta name="twitter:site" content="@z56762">
+<meta name="twitter:creator" content="@@z56762" /><meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://blog.ifeng.asia/posts/05fcb59/" title="DN42 实验网络 —— 内网搭建 - 听风博客" /><link rel="prev" type="text/html" href="https://blog.ifeng.asia/posts/220ffe6/" title="缤纷云&#43;PicGo搭建图床" /><link rel="next" type="text/html" href="https://blog.ifeng.asia/dn42/" title="UNi-Network DN42" /><link rel="alternate" type="text/markdown" href="https://blog.ifeng.asia/posts/05fcb59/index.md" title="DN42 实验网络 —— 内网搭建 - 听风博客"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "DN42 实验网络 —— 内网搭建",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/blog.ifeng.asia\/posts\/05fcb59\/"
+    },"genre": "posts","keywords": "DN42","wordcount":  304 ,
+    "url": "https:\/\/blog.ifeng.asia\/posts\/05fcb59\/","datePublished": "2025-01-21T14:56:57+08:00","dateModified": "2025-01-21T14:56:57+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "unify-z"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="听风博客"><span class="header-title-text">听风博客</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item">
+              <a class="menu-link" href="/dn42/"><i class="fa-solid fa-server fa-fw fa-sm" aria-hidden="true"></i> DN42</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="听风博客"><span class="header-title-text">听风博客</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item"><a class="menu-link" href="/dn42/"><i class="fa-solid fa-server fa-fw fa-sm" aria-hidden="true"></i> DN42</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>DN42 实验网络 —— 内网搭建</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a href="https://blog.ifeng.asia/" title="作者"target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img loading="lazy" src="https://q.qlogo.cn/g?b=qq&amp;nk=3336016933&amp;s=160" alt="unify-z" data-title="unify-z" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;unify-z</a></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category" title="分类 - 网络"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 网络</a></span></div><div class="post-meta-line"><span title="发布于 2025-01-21 14:56:57"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-01-21">2025-01-21</time></span>&nbsp;<span title="304 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 400 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 2 分钟</span>&nbsp;<span class="comment-visitors" data-flag-title="DN42 实验网络 —— 内网搭建"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span class="artalk-visitor-count" data-page-key="/posts/05fcb59/">-</span>&nbsp;次阅读
+          </span>&nbsp;<span class="comment-count" data-flag-title="DN42 实验网络 —— 内网搭建">
+              <i class="fa-regular fa-comments fa-fw me-1" aria-hidden="true"></i><span class="artalk-comment-count" data-page-key="/posts/05fcb59/">-</span>&nbsp;条评论
+            </span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#系统设置">系统设置</a></li>
+        <li><a href="#内网搭建">内网搭建</a></li>
+        <li><a href="#zerotier-one-配置">ZeroTier-One 配置</a></li>
+      </ul>
+    </li>
+    <li><a href="#ibgp-相关配置">IBGP 相关配置</a></li>
+    <li><a href="#参考文章">参考文章</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="前言" class="heading-element"><span>前言</span>
+  <a href="#%e5%89%8d%e8%a8%80" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>DN42 全称 Decentralized Network 42（42 号去中心网络），是一个大型、去中心化的 VPN 网络。但是与其它传统 VPN 不同的是，DN42 本身不提供 VPN 出口服务（也就是说你不能用他来绕墙）但它使用了大量在目前互联网骨干上应用的技术（例如 BGP 和递归 DNS），可以很好地模拟一个真实的网络环境。</p>
+<h2 id="开始搭建" class="heading-element"><span>开始搭建</span>
+  <a href="#%e5%bc%80%e5%a7%8b%e6%90%ad%e5%bb%ba" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="系统设置" class="heading-element"><span>系统设置</span>
+  <a href="#%e7%b3%bb%e7%bb%9f%e8%ae%be%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>​	首先，需要打开 Linux 内核的数据包转发功能（<code>ip_forwarding</code>）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo &#34;net.ipv4.ip_forward=1&#34; &gt;&gt; /etc/sysctl.conf
+</span></span><span class="line"><span class="cl">echo &#34;net.ipv6.conf.default.forwarding=1&#34; &gt;&gt; /etc/sysctl.conf
+</span></span><span class="line"><span class="cl">echo &#34;net.ipv6.conf.all.forwarding=1&#34; &gt;&gt; /etc/sysctl.conf
+</span></span><span class="line"><span class="cl">sysctl -p</span></span></code></pre></td></tr></table>
+</div>
+</div><p>​	其次，关闭 Linux 内核 <code>rp_filter</code> 的严格模式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo &#34;net.ipv4.conf.default.rp_filter=0&#34; &gt;&gt; /etc/sysctl.conf
+</span></span><span class="line"><span class="cl">echo &#34;net.ipv4.conf.all.rp_filter=0&#34; &gt;&gt; /etc/sysctl.conf
+</span></span><span class="line"><span class="cl">sysctl -p</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="alert alert-warning"><p class="alert-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086.0l6.082 11.378A1.75 1.75.0 0114.082 15H1.918A1.75 1.75.0 01.375 12.425zm1.763.707a.25.25.0 00-.44.0L1.698 13.132a.25.25.0 00.22.368h12.164a.25.25.0 00.22-.368zm.53 3.996v2.5a.75.75.0 01-1.5.0v-2.5a.75.75.0 011.5.0zM9 11a1 1 0 11-2 0 1 1 0 012 0z"/></svg>警告</p><p>以下内容引用自 <a href="https://lantian.pub/article/modify-website/dn42-experimental-network-2020.lantian/"target="_blank" rel="external nofollow noopener noreferrer">DN42 实验网络介绍及注册教程（2022-12 更新） - Lan Tian @ Blog</a></p></div><ul>
+<li>
+<p><code>rp_filter</code>是 Linux 内核针对网络的一项网络安全保护功能，对于数据包的来源地址和来源网络界面（网卡）进行检查：</p>
+<ul>
+<li>
+<p>如果设置为 0（即禁用），放行所有数据包。</p>
+<ul>
+<li>但是有些无法正常回复（路由表内没有对应项目）的数据包也会被发给应用程序处理，消耗额外的系统资源。</li>
+<li>不过额外消耗应该很小，因此上述两项设置为 0 也没问题。</li>
+</ul>
+</li>
+<li>
+<p>如果设置为 1（严格模式），如果数据包来源网卡不是发送这个数据包的最优网卡（也就是如果你本机要回复这个地址的话，会选择一张不同的网卡），就把这个数据包丢掉。</p>
+<ul>
+<li>来源和回复在不同网卡是 DN42 内<strong>非常常见的情况</strong>，因此 <strong>千万 一定 绝对</strong> 不能把 <code>rp_filter</code> 设置成 1！</li>
+</ul>
+</li>
+<li>
+<p>如果设置为 2（宽松模式），从理论上来说，如果数据包来源地址不在路由表内（也就是本机不知道要怎么回复这个地址），就把这个数据包丢掉。</p>
+<ul>
+<li>但是理论归理论，在新版本（5.0+）的内核中，实际使用中依然会有大量来源地址正确的正常数据包被丢弃。因此不要使用这个模式，请统一使用0。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>​	最后，关闭 UFW 等防火墙工具。如果你需要配置Firewall的话，我建议你手动配置 iptables。</p>
+<h3 id="内网搭建" class="heading-element"><span>内网搭建</span>
+  <a href="#%e5%86%85%e7%bd%91%e6%90%ad%e5%bb%ba" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>​	自建 Zerotier-planet 服务器，按官方文档来就行，本文不再叙述。</p>
+<p>​	安装完成后，点击导航栏 &ldquo;Add Network&rdquo;，名称随意，进入到网络配置页面，如下图所示，进入Easy Setup配置你在 DN42 分到的 ip信息。</p>
+<p><img loading="lazy" src="https://imgcdn.unifyz.5k.work/image-20250121163709260.png" alt="image-20250121163709260" srcset="https://imgcdn.unifyz.5k.work/image-20250121163709260.png?size=small, https://imgcdn.unifyz.5k.work/image-20250121163709260.png?size=medium 1.5x, https://imgcdn.unifyz.5k.work/image-20250121163709260.png?size=large 2x" data-title="image-20250121163709260" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>​	然后打开 Routes，将 ip 的网关设置好</p>
+<p><img loading="lazy" src="https://imgcdn.unifyz.5k.work/image-20250121163826805.png" alt="image-20250121163826805" srcset="https://imgcdn.unifyz.5k.work/image-20250121163826805.png?size=small, https://imgcdn.unifyz.5k.work/image-20250121163826805.png?size=medium 1.5x, https://imgcdn.unifyz.5k.work/image-20250121163826805.png?size=large 2x" data-title="image-20250121163826805" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="zerotier-one-配置" class="heading-element"><span>ZeroTier-One 配置</span>
+  <a href="#zerotier-one-%e9%85%8d%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>​	安装</p>
+<p>​	<code>curl -s https://install.zerotier.com | sudo bash</code></p>
+<p>​	如果装了 GPG 可以用</p>
+<p>​	<code>curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/main/doc/contact%40zerotier.com.gpg' | gpg --import &amp;&amp; \   if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo &quot;$z&quot; | sudo bash; fi</code></p>
+<p>​	安装完成后，进入 planet安装目录/data/zerotier/dist 把里面的 planet 文件替换到 /var/lib/zerotier-one 后重启服务 <code>zerotier-cli join</code> 加入网络管理员后台同意后，这时候连上你的服务器，ping 一下 web 上分配给其他服务器的 ip，应该可以 ping 通了。</p>
+<h2 id="ibgp-相关配置" class="heading-element"><span>IBGP 相关配置</span>
+  <a href="#ibgp-%e7%9b%b8%e5%85%b3%e9%85%8d%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>​	现在你的服务器只是互联了，但是你并没有宣告外部这个服务器能互联到你 AS 内的其他服务器，所以你需要创建 IBGP 来宣告一下。以下是 bird 配置示例，如果您需要更高级 / 更方便的方式，可前往 <a href="https://lantian.pub/article/modify-website/dn42-experimental-network-2020.lantian/#%E6%90%AD%E5%BB%BA%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%86%85%E7%BD%91"target="_blank" rel="external nofollow noopener noreferrer">DN42 实验网络介绍及注册教程（2022-12 更新） - Lan Tian @ Blog</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">template</span> <span class="n">bgp</span> <span class="n">milu_internal</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">local</span> <span class="n">as</span> <span class="n">OWNAS</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">path</span> <span class="n">metric</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">direct</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">enable</span> <span class="n">extended</span> <span class="n">messages</span> <span class="n">on</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ipv4</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">next</span> <span class="n">hop</span> <span class="bp">self</span> <span class="n">yes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">import</span> <span class="n">all</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">export</span> <span class="n">all</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ipv6</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">next</span> <span class="n">hop</span> <span class="bp">self</span> <span class="n">yes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">import</span> <span class="n">all</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">export</span> <span class="n">all</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">protocol</span> <span class="n">bgp</span> <span class="n">mlnet_other_server</span> <span class="n">from</span> <span class="n">milu_internal</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">NEIGHBOR_IP</span> <span class="err">其他互联服务器的</span><span class="n">ip</span>
+</span></span><span class="line"><span class="cl">  <span class="n">neighbor</span> <span class="n">NEIGHBOR_IP</span> <span class="n">as</span> <span class="n">OWNAS</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">protocol</span> <span class="n">bgp</span> <span class="n">mlnet_other_server</span> <span class="n">from</span> <span class="n">milu_internal</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">NEIGHBOR_IP</span> <span class="err">其他互联服务器的</span><span class="n">ip</span>
+</span></span><span class="line"><span class="cl">  <span class="n">neighbor</span> <span class="n">NEIGHBOR_IP</span> <span class="n">as</span> <span class="n">OWNAS</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">以此类推</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>将此配置文件添加到<strong>每个服务器</strong>上，重载 bird 配置后，等待几分钟应该就可以在外部 ping 到你内部了</p>
+<h2 id="参考文章" class="heading-element"><span>参考文章</span>
+  <a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p><a href="https://milu.ink/313.html"target="_blank" rel="external nofollow noopener noreferrer">萌新入坑 DN42 之 —— 多服务器互联</a></p>
+<p><a href="https://lantian.pub/article/modify-website/dn42-experimental-network-2020.lantian/#%E6%90%AD%E5%BB%BA%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%86%85%E7%BD%91"target="_blank" rel="external nofollow noopener noreferrer">DN42 实验网络介绍及注册教程（2022-12 更新） - Lan Tian @ Blog</a></p></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2025-01-21 14:56:57">更新于 2025-01-21&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/05fcb59/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="https://blog.ifeng.asia/posts/05fcb59/" data-title="DN42 实验网络 —— 内网搭建" data-via="@z56762" data-hashtags="DN42"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://blog.ifeng.asia/posts/05fcb59/" data-hashtag="DN42"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://blog.ifeng.asia/posts/05fcb59/" data-title="DN42 实验网络 —— 内网搭建"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/dn42/" class="post-tag" title="标签 - DN42">DN42</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/220ffe6/" class="post-nav-item" rel="prev" title="缤纷云&#43;PicGo搭建图床"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>缤纷云&#43;PicGo搭建图床</a></div>
+</div>
+<link href="https://registry.npmmirror.com/artalk/2.9.1/files/dist/Artalk.css" rel="stylesheet" />
+<script src="https://registry.npmmirror.com/artalk/2.9.1/files/dist/Artalk.js"></script>
+
+
+<div id="Comments"></div>
+
+<script>
+  let enabledarkMode = false;
+  const htmlTag = document.querySelector('html');
+  if (htmlTag.getAttribute('data-theme') === 'dark') {
+    enabledarkMode = true;
+  }
+  const ArtalkConfig = {
+    el: '#Comments',
+    pageKey: window.location.pathname,
+    server: 'https://artalk.unifyz.top/',
+    site: '听风博客',
+    darkMode: enabledarkMode,
+  };
+
+
+  const mutationObserver = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (mutation.attributeName === 'data-theme') {
+        ArtalkConfig.darkMode = htmlTag.getAttribute('data-theme') === 'dark';
+        Artalk.init(ArtalkConfig);
+        break;
+      }
+    }
+  });
+
+  mutationObserver.observe(htmlTag, { attributes: true });
+  Artalk.init(ArtalkConfig);
+</script></article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.144.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.17-8b402129"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="https://blog.ifeng.asia/"target="_blank" rel="external nofollow noopener noreferrer">unify-z</a></span><span id="runtime" class="runtime">
+              这个小破站已运行 0 年 0 天 0 时 0 分 0 秒
+          </span></div></div>
+  </footer><script>
+  const start_time = 1673712000 * 1000; 
+
+  function formatRuntime(seconds) {
+    const years = Math.floor(seconds / (365 * 24 * 60 * 60));
+    seconds %= 365 * 24 * 60 * 60;
+    const days = Math.floor(seconds / (24 * 60 * 60));
+    seconds %= 24 * 60 * 60;
+    const hours = Math.floor(seconds / (60 * 60));
+    seconds %= 60 * 60;
+    const minutes = Math.floor(seconds / 60);
+    seconds %= 60;
+
+    return `${years} 年 ${days} 天 ${hours} 时 ${minutes} 分 ${seconds} 秒`;
+  }
+
+  setInterval(() => {
+    const now_time = new Date().getTime();
+    let run_time = Math.floor((now_time - start_time) / 1000);
+    document.getElementById('runtime').textContent = ` 这个小破站已运行 ${formatRuntime(run_time)}`;
+  }, 1000); 
+</script></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div><div class="fixed-button view-comments d-none" role="button" aria-label="查看评论"><i class="fa-solid fa-comment fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.17-8b402129"};</script><script src="/js/theme.min.js" defer></script><script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b683b6034101ff7bba87bf90667888c9";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script></body>
+</html>
